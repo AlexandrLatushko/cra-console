@@ -1,4 +1,9 @@
-function Rating(props: any) {
+
+type RatingPropsType = {
+  value: number
+}
+
+function Rating(props: RatingPropsType) {
   console.log("Raiting rendered");
 
   if (props.value === 1) {
@@ -67,8 +72,13 @@ function Rating(props: any) {
   );
 }
 
-function Star(props: any) {
+type StarPropspype = {
+  selected: boolean
+}
+
+function Star(props: StarPropspype) {
   console.log("Star rendered");
+  
   if (props.selected === true) {
     return (
       <span>
